@@ -10,11 +10,15 @@ jobs:
         uses: Gobot1234/lint-action@v.1.8.2
         with:
           auto_fix: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: "fix: auto-fix workflow"
+          
           black: true
           black_dir: hiklink
+          
           isort: true
           isort_dir: hiklink
+          
           mypy: true
           mypy_dir: hiklink
         
