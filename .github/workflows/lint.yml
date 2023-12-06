@@ -6,6 +6,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Generate Access Token
+        uses: kattecon/gh-app-access-token-gen@v1.0.0
+
       - name: auto-fix and linting (black, isort, mypy)
         uses: Gobot1234/lint-action@v.1.8.2
         with:
