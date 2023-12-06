@@ -1,0 +1,39 @@
+[tool.poetry]
+name    = "hiklink"
+version = "1.0.0"
+authors = ["stefanlight <@stefanlight>"]
+
+description = "Powerful scalable asynchronous wrapper for Lavalink developed for hikari."
+readme      = "README.md"
+license     = "MIT"
+include     = ["CHANGELOG.md"]
+
+repository = "https://github.com/ShinshiDevs/Hiklink"
+
+keywords    = ["lavalink", "hikari", "wrapper", "discord"]
+classifiers = [
+  "Development Status   :: 1 - Planning",
+  "Environment          :: No Input/Output (Daemon)",
+  "Framework            :: aiohttp",
+  "Intended Audience    :: Developers",
+  "License              :: OSI Approved         :: MIT License",
+  "Natural Language     :: English",
+  "Natural Language     :: Russian",
+  "Programming Language :: Python               :: 3         :: Only",
+  "Programming Language :: Python               :: 3.10",
+  "Programming Language :: Python               :: 3.11",
+  "Programming Language :: Python               :: 3.12",
+  "Topic                :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/ShinshiDevs/Hiklink/issues"
+"Discord"     = "https://discord.gg/3bXW7an2ke"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires      = ["setuptools"]
+build-backend = "setuptools.build_meta"
