@@ -1,0 +1,27 @@
+on:
+  pull_request:
+    branches:
+    - main
+  push:
+    branches:
+    - main
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v5.0.0
+        with:
+          python-version: 3.10
+          cache: poetry
+          architecture: x64
+    
+      - name: isort, black
+        uses: wrboyce/python-lint-action@v1.0.0
+
+      - name: pylint
+        uses: gabriel-milan/action-pylint@v1
+  
