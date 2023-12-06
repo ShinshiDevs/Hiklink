@@ -10,7 +10,7 @@ jobs:
         uses: Gobot1234/lint-action@v.1.8.2
         with:
           auto_fix: true
-          commit_message: "fix(isort): auto"
+          commit_message: "fix: auto-fix workflow"
           black: true
           black_dir: hiklink
           isort: true
