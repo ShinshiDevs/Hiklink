@@ -1,10 +1,4 @@
-on:
-  pull_request:
-    branches:
-    - main
-  push:
-    branches:
-    - main
+on: [push]
 
 jobs:
   deploy:
@@ -12,9 +6,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: isort, black
-        uses: wrboyce/python-lint-action@v1.0.0
-
-      - name: pylint
-        uses: gabriel-milan/action-pylint@v1
-  
+      - name: auto-fix and linting (black, isort, mypy)
+        uses: Gobot1234/lint-action@v.1.8.2
+        with:
+          auto_fix: true
+          commit_message: "fix(isort): auto"
+          black: true
+          black_dir: hiklink
+          isort: true
+          isort_dir: hiklink
+          mypy: true
+          mypy_dir: hiklink
+        
